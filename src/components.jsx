@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import {
   Sun, Moon, Languages, ArrowLeft, ArrowRight, Download, Mail, Linkedin,
-  Search, Target, PenTool, TestTube, ExternalLink, Send, Phone, X, Menu
+  Search, Target, PenTool, TestTube, ExternalLink, Send, Phone, X, Menu,
+  Sparkles, Laptop, Palette, Star,
+  AlertTriangle, Check, ChevronDown, Lightbulb, Layers, RefreshCw
 } from "lucide-react";
 import { PROJECTS } from "./content";
 
@@ -93,6 +95,19 @@ export function Nav({ t, lang, setLang, theme, setTheme, go, onNav }) {
               <button key={id} onClick={() => jump(id)}>{label}</button>
             ))}
           </div>
+          <div className="sheet-foot">
+            <a className="navcta" href={CV_URL} download>
+              <Download size={15} strokeWidth={1.8} />{t.nav.cv}
+            </a>
+            <button className="icobtn" onClick={() => setLang(lang === "ar" ? "en" : "ar")}
+              aria-label="Switch language">
+              <Languages size={18} strokeWidth={1.6} />
+            </button>
+            <button className="icobtn" onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              aria-label="Toggle theme">
+              {theme === "light" ? <Moon size={18} strokeWidth={1.6} /> : <Sun size={18} strokeWidth={1.6} />}
+            </button>
+          </div>
         </div>
       )}
     </>
@@ -117,10 +132,10 @@ export function Hero({ t, onNav }) {
         <div className="avatar-stage">
           <div className="orb">
             <Avatar src="/images/avatar-hero.png" alt="Randa" size={130} />
-            <span className="spark s1">✦</span>
-            <span className="spark s2">💻</span>
-            <span className="spark s3">🎨</span>
-            <span className="spark s4">✨</span>
+            <span className="spark s1"><Star size={19} strokeWidth={1.6} /></span>
+            <span className="spark s2"><Laptop size={19} strokeWidth={1.6} /></span>
+            <span className="spark s3"><Palette size={19} strokeWidth={1.6} /></span>
+            <span className="spark s4"><Sparkles size={19} strokeWidth={1.6} /></span>
           </div>
         </div>
       </div>
@@ -272,13 +287,15 @@ export function Contact({ t }) {
             <h2>{t.contact.title}</h2>
             <p>{t.contact.body}</p>
           </div>
-          <div className="contact-avatar">
-            <Avatar src="/images/avatar-fingers-crossed.png" alt="Randa" size={72} />
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <a className="clink" href={`mailto:${EMAIL}`}><Mail size={17} strokeWidth={1.6} />{EMAIL}</a>
-            <a className="clink" href={`tel:${PHONE.replace(/\s/g, "")}`}><Phone size={17} strokeWidth={1.6} />{PHONE}</a>
-            <a className="clink" href={LINKEDIN} target="_blank" rel="noreferrer"><Linkedin size={17} strokeWidth={1.6} />LinkedIn</a>
+          <div className="contact-row">
+            <div className="contact-avatar">
+              <Avatar src="/images/avatar-fingers-crossed.png" alt="Randa" size={96} />
+            </div>
+            <div className="contact-links">
+              <a className="clink" href={`mailto:${EMAIL}`}><Mail size={17} strokeWidth={1.6} />{EMAIL}</a>
+              <a className="clink" href={`tel:${PHONE.replace(/\s/g, "")}`} dir="ltr"><Phone size={17} strokeWidth={1.6} />{PHONE}</a>
+              <a className="clink" href={LINKEDIN} target="_blank" rel="noreferrer"><Linkedin size={17} strokeWidth={1.6} />LinkedIn</a>
+            </div>
           </div>
         </div>
         <div className="form">
@@ -314,17 +331,12 @@ export function Footer({ t }) {
   );
 }
 
+const STEP_ICONS = [Search, Target, PenTool, Layers, RefreshCw, TestTube];
+
 export function CaseStudy({ t, lang, project, back }) {
   const d = project[lang];
   const L = t.cs.labels;
   const Back = lang === "ar" ? ArrowRight : ArrowLeft;
-
-  const Block = ({ title, paras }) => (
-    <section className="blk">
-      <h2>{title}</h2>
-      {paras.map((p, i) => <p key={i}>{p}</p>)}
-    </section>
-  );
 
   return (
     <article className="cs">
@@ -353,26 +365,66 @@ export function CaseStudy({ t, lang, project, back }) {
 
       <div className="wrap">
         <div className="cs-body">
-          <Block title={L.overview} paras={d.overview} />
-          <Block title={L.problem} paras={d.problem} />
-          <Block title={L.goal} paras={d.goal} />
-          <Block title={L.role} paras={d.role_body} />
+          <section className="blk">
+            <h2>{L.overview}</h2>
+            {d.overview.map((p, i) => <p key={i}>{p}</p>)}
+          </section>
 
           <section className="blk">
-            <h2>{L.process}</h2>
-            {d.steps.map(([h, p]) => (
-              <div className="step" key={h}>
-                <h3>{h}</h3>
-                <p>{p}</p>
+            <div className="pair">
+              <div className="pcell">
+                <div className="pcell-ico warn"><AlertTriangle size={18} strokeWidth={1.7} /></div>
+                <h3>{L.problem}</h3>
+                {d.problem.map((p, i) => <p key={i}>{p}</p>)}
               </div>
-            ))}
+              <div className="pcell">
+                <div className="pcell-ico good"><Target size={18} strokeWidth={1.7} /></div>
+                <h3>{L.goal}</h3>
+                {d.goal.map((p, i) => <p key={i}>{p}</p>)}
+              </div>
+            </div>
+          </section>
+
+          <section className="blk">
+            <h2>{L.role}</h2>
+            <p className="role-note">{d.role_note}</p>
+            <ul className="rolelist">
+              {d.role_items.map((r) => (
+                <li key={r}><Check size={15} strokeWidth={2.2} />{r}</li>
+              ))}
+            </ul>
           </section>
         </div>
       </div>
 
       <div className="wrap">
-        <section className="blk" style={{ paddingBottom: 64 }}>
-          <h2 style={{ fontSize: 26, marginBottom: 22, textAlign: "center" }}>{t.cs.gallery}</h2>
+        <section className="blk flowsec">
+          <h2>{L.process}</h2>
+          <ol className="flow">
+            {d.steps.map(([h, p], i) => {
+              const Ico = STEP_ICONS[i % STEP_ICONS.length];
+              return (
+                <li className="flowstep" key={h}>
+                  <div className="flowcard">
+                    <div className="flow-ico"><Ico size={19} strokeWidth={1.7} /></div>
+                    <h3>{h}</h3>
+                    <p>{p}</p>
+                  </div>
+                  {i < d.steps.length - 1 && (
+                    <span className="flowarrow" aria-hidden="true">
+                      <ChevronDown size={18} strokeWidth={1.8} />
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+      </div>
+
+      <div className="wrap">
+        <section className="blk">
+          <h2 className="center">{t.cs.gallery}</h2>
           <div className={"gallery" + (project.shotsMobile ? " gal-mobile" : "")}>
             {project.shots.map(([src, capAr, capEn]) => (
               <figure className="shot" key={src}>
@@ -385,10 +437,32 @@ export function CaseStudy({ t, lang, project, back }) {
       </div>
 
       <div className="wrap">
-        <div className="cs-body">
-          <Block title={L.outcome} paras={d.outcome} />
-        </div>
+        <section className="blk">
+          <h2>{L.outcome}</h2>
+          <div className="metrics">
+            {d.metrics.map(([value, label]) => (
+              <div className="metric" key={label}>
+                <b>{value}</b>
+                <span>{label}</span>
+              </div>
+            ))}
+          </div>
+          <div className="cs-body" style={{ padding: 0 }}>
+            {d.outcome.map((p, i) => <p className="outcome-p" key={i}>{p}</p>)}
+          </div>
+        </section>
+
+        <section className="blk">
+          <div className="learn">
+            <div className="learn-ico"><Lightbulb size={19} strokeWidth={1.7} /></div>
+            <div>
+              <h3>{L.learning}</h3>
+              <p>{d.learning}</p>
+            </div>
+          </div>
+        </section>
       </div>
     </article>
   );
 }
+

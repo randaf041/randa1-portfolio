@@ -5,7 +5,7 @@ import { Nav, Hero, About, Process, Work, Skills, Contact, Footer, CaseStudy } f
 import "./styles.css";
 
 function useAppState() {
-  const [lang, setLang] = useState(() => localStorage.getItem("lang") || "ar");
+  const [lang, setLang] = useState(() => localStorage.getItem("lang") || "en");
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "system");
   const [resolved, setResolved] = useState("light");
 
@@ -62,10 +62,9 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = t.dir;
-    document.title = lang === "ar"
-      ? "رندا الزهراني — مصممة منتجات رقمية"
-      : "Randa Alzahrani — Product Designer";
-  }, [lang, t.dir]);
+    document.title = "Randa Portfolio";
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [lang, t.dir, theme]);
 
   const goSection = (id) => {
     if (window.location.pathname !== "/") {

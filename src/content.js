@@ -53,13 +53,13 @@ export const C = {
       items: ["بحث المستخدم", "تصميم واجهات UI", "التفكير المنتج", "أنظمة التصميم", "النمذجة التفاعلية", "اختبار قابلية الاستخدام", "هندسة المعلومات", "العروض والتوثيق"],
     },
     contact: {
-      title: "لنتواصل",
+      title: "التواصل",
       body: "يسعدني التواصل بخصوص فرص التصميم، مشاريع UX/UI، أو التعاون في بناء تجارب رقمية ذات معنى.",
       name: "الاسم", email: "البريد الإلكتروني", message: "الرسالة", send: "إرسال الرسالة",
     },
     footer: { line: "صمم وطور بواسطة رنـــدا", role: "User-Centered Product Designer" },
     cs: { back: "رجوع للأعمال", demo: "تجربة مباشرة", gallery: "معرض الواجهات",
-      labels: { overview: "نظرة عامة", problem: "المشكلة", goal: "الهدف", role: "دوري", process: "العملية", outcome: "المخرجات والتعلم" },
+      labels: { overview: "نظرة عامة", problem: "المشكلة", goal: "الهدف", role: "دوري", process: "العملية", outcome: "المخرجات", learning: "أهم ما تعلّمته" },
       meta: { category: "التصنيف", duration: "المدة", team: "الفريق", tools: "الأدوات", company: "الجهة" } },
   },
   en: {
@@ -99,7 +99,7 @@ export const C = {
     },
     footer: { line: "Designed and built by Randa", role: "Human-Centered Product Designer" },
     cs: { back: "Back to work", demo: "Live demo", gallery: "Interface Gallery",
-      labels: { overview: "Overview", problem: "Problem", goal: "Goal", role: "My Role", process: "Process", outcome: "Outcome & Learnings" },
+      labels: { overview: "Overview", problem: "Problem", goal: "Goal", role: "My Role", process: "Process", outcome: "Outcome", learning: "What I learned" },
       meta: { category: "Category", duration: "Duration", team: "Team", tools: "Tools", company: "Company" } },
   },
 };
@@ -122,17 +122,21 @@ export const PROJECTS = [
         "وأظهر البحث أن الخصوصية والوصمة كانتا أكبر حاجزين أمام التبنّي: من أصل ٢٨٧ مشاركًا في الاستبيان، ٧٤ فقط سبق لهم استخدام تطبيق للصحة النفسية أو التأمل.",
       ],
       goal: ["تصميم تجربة هادئة عربية الأصل، تحوّل الدعم النفسي إلى تدخلات صغيرة تندمج في يوم الطالب الدراسي — بلا لغة طبية، بلا مقارنة اجتماعية، وبلا شعور بالذنب عند التوقف."],
-      role_body: ["عملت ضمن فريق من ٦ أعضاء، وشاركت في معظم مراحل تجربة المستخدم: إعداد نماذج المقابلات وتنفيذها، تحليل نتائج البحث واستخلاص نقاط الألم، بناء الشخصيات وخريطة رحلة المستخدم، تصميم الواجهات والنماذج التفاعلية، والمشاركة في اختبارات قابلية الاستخدام والتحسين بناءً على نتائجها."],
+      role_note: "ضمن فريق من ٦ أعضاء، شاركت في معظم مراحل تجربة المستخدم:",
+      role_items: ["إعداد نماذج المقابلات وتنفيذها", "تحليل نتائج البحث واستخلاص نقاط الألم", "بناء الشخصيات وخريطة رحلة المستخدم", "تصميم الواجهات والنماذج التفاعلية", "اختبارات قابلية الاستخدام والتحسين"],
       steps: [
         ["البحث", "مقابلات شبه منظمة مع ١٥ طالبة موهوبة، واستبيان بـ٢٨٧ استجابة، وتحليل مقارن للتطبيقات المشابهة كشف غياب حل يجمع بين الجمهور الموهوب، العربية وRTL، والدعم داخل السياق المدرسي."],
         ["التحديد", "تحويل النتائج إلى ست نقاط ألم موثّقة، وشخصيات، وخريطة رحلة، وقائمة احتياجات عاطفية تُترجم إلى قرارات تفاعل: الاعتراف بالشعور دون تشخيصه، التحكم الكامل بالبيانات، والمشاركة الاختيارية دائمًا."],
         ["التصميم", "مخططات أولية ثم واجهات عالية الدقة، ونظام تصميم من مكوّنات قابلة لإعادة الاستخدام (بطاقة نشاط، مُحدّد المزاج، أزرار، مؤشرات تقدم، شاشات إتمام)، مع بنية تنقّل مسطّحة من خمسة أقسام."],
         ["التقييم", "جولتان من اختبار قابلية الاستخدام على النموذج، ثم جولة ثالثة على النظام المنفّذ فعليًا مع ٦ مستخدمات من الفئة المستهدفة، بأسلوب التفكير بصوت عالٍ، وسيناريوهات واقعية، ومقابلات ختامية."],
       ],
-      outcome: [
-        "تحسّن معدل إتمام المهام من ٦٨٪ إلى ٩٢٪ بين جولتَي التقييم، وانخفض متوسط زمن الإتمام من ٢.٤ إلى ١.٣ دقيقة. وفي اختبار النظام المنفّذ، أكملت ٦ من ٦ مستخدمات جميع السيناريوهات دون أي تدخل وفي أقل من ٣٠ دقيقة للجلسة الكاملة. ووصفن التجربة بكلمات شعورية لا وظيفية: «مريحة»، «إنجاز وهدوء»، «فخر».",
-        "أهم ما تعلّمته أن الوضوح البصري وحده لا يكفي؛ الميزة قد تبدو مفهومة تمامًا في Figma وتفشل في النظام الحقيقي لأنها تفتقد حالة اختيار أو حركة أو رسالة خطأ لطيفة. والأهم أن سوء فهم المستخدم لتسمية ما قد يكون إشارة إلى حاجة حقيقية، لا خطأً يُصحَّح.",
+      metrics: [
+        ["٦٨٪ ← ٩٢٪", "معدل إتمام المهام بين جولتَي التقييم"],
+        ["٢.٤ ← ١.٣ دقيقة", "متوسط زمن إتمام المهمة"],
+        ["٦ من ٦", "أكملن كل السيناريوهات دون تدخل"],
       ],
+      outcome: ["وصفت المستخدمات التجربة بكلمات شعورية لا وظيفية: «مريحة»، «إنجاز وهدوء»، «فخر» — وهو المؤشر الأقرب لفلسفة المشروع."],
+      learning: "الوضوح البصري وحده لا يكفي؛ الميزة قد تبدو مفهومة تمامًا في Figma وتفشل في النظام الحقيقي لأنها تفتقد حالة اختيار أو حركة أو رسالة خطأ لطيفة. والأهم أن سوء فهم المستخدم لتسمية ما قد يكون إشارة إلى حاجة حقيقية، لا خطأً يُصحَّح.",
     },
     en: {
       name: "Mishkat", category: "Graduation Project",
@@ -146,17 +150,21 @@ export const PROJECTS = [
         "Research made the barrier concrete: privacy and stigma mattered more than features. Of 287 survey respondents, only 74 had ever used a mental health or meditation app.",
       ],
       goal: ["Design a calm, Arabic-first experience that turns emotional support into micro-interventions small enough to fit inside a school day — with no medical language, no social comparison, and no guilt for stopping."],
-      role_body: ["I worked within a team of 6 and contributed across most stages of the UX process: writing and conducting user interviews, analyzing research findings and identifying pain points, building personas and the user journey map, designing interfaces and interactive prototypes, and taking part in usability testing and the improvements that followed."],
+      role_note: "Within a team of 6, I contributed across most stages of the UX process:",
+      role_items: ["Writing and conducting user interviews", "Analyzing findings and identifying pain points", "Building personas and the journey map", "Designing interfaces and prototypes", "Usability testing and iteration"],
       steps: [
         ["Research", "Semi-structured interviews with 15 gifted students and a survey with 287 responses, alongside a competitive analysis that revealed no existing product combining a gifted audience, genuine Arabic and RTL support, and relevance inside a school context."],
         ["Define", "Findings became six documented pain points, personas, a journey map, and a list of emotional needs translated directly into interaction decisions: acknowledge a feeling without diagnosing it, keep data fully under the student's control, and make sharing always optional."],
         ["Design", "Wireframes, then high-fidelity interfaces, and a design system of reusable components — activity card, mood selector, buttons, progress indicators, completion screens — over a flat five-section navigation structure."],
         ["Evaluate", "Two rounds of usability testing on the prototype, then a third round on the working build with 6 users from the target audience, using think-aloud protocol, realistic task scenarios, and exit interviews."],
       ],
-      outcome: [
-        "Task completion rose from 68% to 92% between the two evaluation rounds, and average completion time dropped from 2.4 to 1.3 minutes. In testing on the working build, all 6 users completed every scenario without intervention, in under 30 minutes per full session. They described the experience in emotional rather than functional terms: comfortable, calm, a sense of accomplishment.",
-        "What I took from it: visual clarity alone is not enough. A feature can look perfectly understood in Figma and still fail in a real build because it lacks a selected state, a transition, or a gentle error message. And more importantly, when a user misreads a label, that confusion is often pointing at a real need rather than a mistake to correct.",
+      metrics: [
+        ["68% → 92%", "Task completion between evaluation rounds"],
+        ["2.4 → 1.3 min", "Average time to complete a task"],
+        ["6 of 6", "Completed every scenario unaided"],
       ],
+      outcome: ["Users described the experience in emotional rather than functional terms: comfortable, calm, a sense of accomplishment — the closest signal to what the project set out to do."],
+      learning: "Visual clarity alone is not enough. A feature can look perfectly understood in Figma and still fail in a real build because it lacks a selected state, a transition, or a gentle error message. And when a user misreads a label, that confusion is often pointing at a real need rather than a mistake to correct.",
     },
   },
   {
@@ -176,7 +184,8 @@ export const PROJECTS = [
         "النتيجة اختلافات في الألوان والمكوّنات والمسافات بين المنتجات، وإعادة بناء العناصر نفسها كل مرة من الصفر — وهو ما يبطئ التصميم والتطوير معًا.",
       ],
       goal: ["فهم كل منتج ومستخدميه، تحديد فرص التحسين بمنهجية لا بانطباع، وبناء أساس بصري موحّد يضمن اتساق المنتجات ويقلّل وقت التطوير."],
-      role_body: ["شاركت ضمن فريق التصميم في تحليل المنتجات، إجراء مقابلات المستخدمين وتحليل نتائجها، بناء الشخصيات وخرائط الرحلة، تصميم النماذج الأولية، والمساهمة في بناء مكتبة المكوّنات."],
+      role_note: "ضمن فريق التصميم، شاركت في:",
+      role_items: ["تحليل المنتجات وواجهاتها الحالية", "إجراء مقابلات المستخدمين وتحليل نتائجها", "بناء الشخصيات وخرائط الرحلة", "تصميم النماذج الأولية", "بناء مكتبة المكوّنات"],
       steps: [
         ["التحليل", "دراسة خمسة من أجهزة الشركة وتحليل واجهاتها الحالية باستخدام مبادئ نيلسن العشر لقابلية الاستخدام، مع تحديد الفئة المستهدفة والمهام التي ينفّذها المستخدم على كل جهاز."],
         ["البحث", "مقابلات مع المستخدمين الحاليين لفهم احتياجاتهم وتوقعاتهم، وتحليل المنافسين في السوق، ثم تلخيص النتائج في تقارير واضحة."],
@@ -185,10 +194,13 @@ export const PROJECTS = [
         ["بناء نظام التصميم", "مكتبة مكوّنات لكل منتج ضمن هوية بصرية واحدة: نظام ألوان بدرجات فاتحة وداكنة، أنماط الخط والتباعد، وإرشادات استخدام تشمل معايير الوصول."],
         ["المراجعة والتكرار", "عرض النماذج على الفريق الداخلي والمشرفين، تعديل التصميم بناءً على الملاحظات، ثم اختبارات قابلية استخدام مع مستخدمين حقيقيين وتحسين الواجهات بناءً على نتائجها."],
       ],
-      outcome: [
-        "سلّمت مكتبات مكوّنات لأربعة منتجات، ونماذج تفاعلية عالية الدقة، وتقارير بحث وتحسين لتجربة المستخدم.",
-        "أهم ما تعلّمته أن أصعب ما واجهني في البداية لم يكن التصميم، بل فهم المنتجات نفسها — كيف يعمل كل جهاز وما الفرق بين سياقات استخدامها. وهذا علّمني أن التصميم داخل شركة يبدأ بفهم المنتج قبل فتح Figma، وأن نظام التصميم ليس ترفًا بصريًا بل أداة تسريع: كل مكوّن موحّد يعني وقتًا أقل في التصميم والتطوير، وأخطاء أقل في التسليم.",
+      metrics: [
+        ["٤", "مكتبات مكوّنات مسلَّمة"],
+        ["٥", "أجهزة خضعت للتحليل"],
+        ["٥ أشهر", "مدة العمل داخل فريق التصميم"],
       ],
+      outcome: ["سلّمت مكتبات مكوّنات لأربعة منتجات، ونماذج تفاعلية عالية الدقة، وتقارير بحث وتحسين لتجربة المستخدم."],
+      learning: "أصعب ما واجهني في البداية لم يكن التصميم، بل فهم المنتجات نفسها — كيف يعمل كل جهاز وما الفرق بين سياقات استخدامها. التصميم داخل شركة يبدأ بفهم المنتج قبل فتح Figma، ونظام التصميم ليس ترفًا بصريًا بل أداة تسريع: كل مكوّن موحّد يعني وقتًا أقل في التصميم والتطوير، وأخطاء أقل في التسليم.",
     },
     en: {
       name: "EasyPay", category: "Industry Experience",
@@ -202,7 +214,8 @@ export const PROJECTS = [
         "The result was drift — colors, components, and spacing diverging across products, and the same elements rebuilt from scratch each time. That slowed design and development alike.",
       ],
       goal: ["Understand each product and its users, identify improvement opportunities through method rather than impression, and build a unified visual foundation that keeps the products consistent and cuts development time."],
-      role_body: ["Within the design team, I contributed to product analysis, conducting and analyzing user interviews, building personas and journey maps, designing prototypes, and helping build the component library."],
+      role_note: "Within the design team, I contributed to:",
+      role_items: ["Auditing the products and their existing interfaces", "Conducting and analyzing user interviews", "Building personas and journey maps", "Designing prototypes", "Building the component library"],
       steps: [
         ["Analysis", "Studied five of the company's devices and audited their existing interfaces against Nielsen's ten usability heuristics, defining the target audience and the tasks users perform on each device."],
         ["Research", "Interviews with existing users to understand their needs and expectations, plus a competitor analysis, with findings summarized into clear reports."],
@@ -211,10 +224,13 @@ export const PROJECTS = [
         ["Design system", "A component library for each product under one visual identity: a color system with light and dark scales, type and spacing rules, and usage guidelines covering accessibility standards."],
         ["Review & iterate", "Reviewed prototypes with the internal team and supervisors, revised based on feedback, then ran usability tests with real users and refined the interfaces accordingly."],
       ],
-      outcome: [
-        "I delivered component libraries for four products, high-fidelity interactive prototypes, and research and UX improvement reports.",
-        "What I took from it: the hardest part at the start was not the design work but understanding the products themselves — how each device operates and how their usage contexts differ. That taught me that design inside a company begins with understanding the product, well before opening Figma. And that a design system is not visual luxury but a speed tool: every unified component means less time in design and development, and fewer errors at handoff.",
+      metrics: [
+        ["4", "Component libraries delivered"],
+        ["5", "Devices audited"],
+        ["5 months", "Inside the design team"],
       ],
+      outcome: ["I delivered component libraries for four products, high-fidelity interactive prototypes, and research and UX improvement reports."],
+      learning: "The hardest part at the start was not the design work but understanding the products themselves — how each device operates and how their usage contexts differ. Design inside a company begins with understanding the product, well before opening Figma. And a design system is not visual luxury but a speed tool: every unified component means less time in design and development, and fewer errors at handoff.",
     },
   },
 ];
