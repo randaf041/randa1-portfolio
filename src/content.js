@@ -1,0 +1,220 @@
+export const MISHKAT_SHOTS = [
+  ["/images/mishkat/home.png", "الرئيسية", "Home"],
+  ["/images/mishkat/activities.png", "الأنشطة", "Activities"],
+  ["/images/mishkat/focus.png", "التركيز", "Focus"],
+  ["/images/mishkat/session.png", "جلسة تركيز", "Focus session"],
+  ["/images/mishkat/journey.png", "رحلتي", "My Journey"],
+  ["/images/mishkat/breathing.png", "محطة التوازن — تنفس", "Balance Station — breathing"],
+  ["/images/mishkat/mindful.png", "محطة التوازن — يقظة", "Balance Station — mindfulness"],
+  ["/images/mishkat/journal.png", "مساحة التدوين", "Journaling Space"],
+  ["/images/mishkat/play.png", "منطقة اللعب", "Play Zone"],
+  ["/images/mishkat/ask-intro.png", "اسأل مِشكاة", "Ask Mishkat"],
+  ["/images/mishkat/ask-chat.png", "محادثة المرافق", "Companion chat"],
+  ["/images/mishkat/account.png", "حسابي", "Account"],
+];
+
+export const EASYPAY_SHOTS = [
+  ["/images/easypay/login.png", "تسجيل الدخول", "Sign in"],
+  ["/images/easypay/home.png", "الرئيسية", "Home"],
+  ["/images/easypay/amount.png", "إدخال المبلغ", "Amount entry"],
+  ["/images/easypay/settlement.png", "الموازنة", "Settlement"],
+  ["/images/easypay/transactions.png", "العمليات", "Transactions"],
+];
+
+export const C = {
+  ar: {
+    dir: "rtl", brand: "رنـدا",
+    nav: { home: "الرئيسية", about: "عني", process: "منهجيتي", work: "الأعمال", skills: "المهارات", contact: "التواصل", cv: "تحميل CV" },
+    hero: {
+      eyebrow: "أهلًا، أنا رنـــدا",
+      title: "مصممة منتجات رقمية تتمحور حول المستخدم",
+      intro: "أصمم تجارب رقمية واضحة وإنسانية تربط بين احتياج المستخدم، أهداف المنتج، وجودة الواجهة. يتركز عملي على بحث المستخدم، تصميم الواجهات، واختبار قابلية الاستخدام.",
+      primary: "استعرض أعمالي", secondary: "تحميل CV",
+    },
+    about: {
+      title: "عني",
+      body: "أنا مصممة منتجات رقمية مهتمة بتصميم تجارب إنسانية واضحة وسهلة الاستخدام. أعمل على فهم احتياجات المستخدمين، تحليل المشكلات، وبناء حلول رقمية تجمع بين الوظيفة، الجمال، وقابلية الاستخدام.",
+    },
+    process: {
+      title: "منهجيتي في العمل",
+      intro: "أتعامل مع التصميم كعملية تبدأ بالفهم العميق للمستخدم، ثم تحديد المشكلة، تصميم الحل، واختباره لتحسين التجربة.",
+      items: [
+        ["البحث", "أبدأ بفهم المستخدمين، السياق، الأهداف، نقاط الألم، ومتطلبات المشروع."],
+        ["التحديد", "أرتب النتائج وأحولها إلى مشكلة واضحة، احتياجات مستخدم، مسارات، وأولويات تصميم."],
+        ["التصميم", "أصمم المخططات الأولية، الواجهات، النماذج التفاعلية، وأنظمة التصميم بما يخدم رحلة المستخدم."],
+        ["التقييم", "أراجع وأحسن التجربة من خلال اختبار قابلية الاستخدام، الملاحظات، والتكرار."],
+      ],
+    },
+    work: { title: "أعمالي المختارة", intro: "مجموعة من المشاريع التي تعكس اهتمامي بتجربة المستخدم، تصميم الواجهات، والتفكير المنتج.", cta: "عرض دراسة الحالة", role: "الدور", tools: "الأدوات" },
+    skills: {
+      title: "المهارات والأدوات",
+      intro: "مهاراتي تجمع بين البحث، التصميم، التقييم، وبناء واجهات رقمية واضحة ومنظمة.",
+      skillsLabel: "المهارات", toolsLabel: "الأدوات",
+      items: ["بحث المستخدم", "تصميم واجهات UI", "التفكير المنتج", "أنظمة التصميم", "النمذجة التفاعلية", "اختبار قابلية الاستخدام", "هندسة المعلومات", "العروض والتوثيق"],
+    },
+    contact: {
+      title: "لنتواصل",
+      body: "يسعدني التواصل بخصوص فرص التصميم، مشاريع UX/UI، أو التعاون في بناء تجارب رقمية ذات معنى.",
+      name: "الاسم", email: "البريد الإلكتروني", message: "الرسالة", send: "إرسال الرسالة",
+    },
+    footer: { line: "صمم وطور بواسطة رنـــدا", role: "User-Centered Product Designer" },
+    cs: { back: "رجوع للأعمال", demo: "تجربة مباشرة", gallery: "معرض الواجهات",
+      labels: { overview: "نظرة عامة", problem: "المشكلة", goal: "الهدف", role: "دوري", process: "العملية", outcome: "المخرجات والتعلم" },
+      meta: { category: "التصنيف", duration: "المدة", team: "الفريق", tools: "الأدوات", company: "الجهة" } },
+  },
+  en: {
+    dir: "ltr", brand: "Randa",
+    nav: { home: "Home", about: "About", process: "Process", work: "Portfolio", skills: "Skills", contact: "Contact", cv: "Download CV" },
+    hero: {
+      eyebrow: "Hello, I'm Randa",
+      title: "User-Centered Product Designer",
+      intro: "I design clear and human-centered digital experiences that connect user needs, product goals, and interface quality. My work focuses on user research, interface design, and usability testing.",
+      primary: "View My Work", secondary: "Download CV",
+    },
+    about: {
+      title: "About Me",
+      body: "I'm a digital product designer interested in creating clear, usable, and human-centered experiences. I focus on understanding user needs, analyzing problems, and designing digital solutions that balance function, visual clarity, and usability.",
+    },
+    process: {
+      title: "Work Process",
+      intro: "I approach design as a process that starts with understanding users, defining the right problem, designing purposeful solutions, and testing them to improve the experience.",
+      items: [
+        ["Research", "I start by understanding users, context, goals, pain points, and project requirements."],
+        ["Define", "I organize findings into clear problems, user needs, flows, and design priorities."],
+        ["Design", "I create wireframes, interfaces, prototypes, and design systems that support the user journey."],
+        ["Evaluate", "I test, review, and improve the experience through usability testing, feedback, and iteration."],
+      ],
+    },
+    work: { title: "Selected Work", intro: "A selection of projects that reflect my interest in user experience, interface design, and product thinking.", cta: "View Case Study", role: "Role", tools: "Tools" },
+    skills: {
+      title: "Skills & Tools",
+      intro: "My skills combine research, design, evaluation, and building clear, structured digital interfaces.",
+      skillsLabel: "Skills", toolsLabel: "Tools",
+      items: ["User Research", "UI Design", "Product Thinking", "Design Systems", "Prototyping", "Usability Testing", "Information Architecture", "Presentation & Documentation"],
+    },
+    contact: {
+      title: "Let's Connect",
+      body: "I'm happy to connect for design opportunities, UX/UI projects, or collaborations around meaningful digital experiences.",
+      name: "Name", email: "Email", message: "Message", send: "Send Message",
+    },
+    footer: { line: "Designed and built by Randa", role: "Human-Centered Product Designer" },
+    cs: { back: "Back to work", demo: "Live demo", gallery: "Interface Gallery",
+      labels: { overview: "Overview", problem: "Problem", goal: "Goal", role: "My Role", process: "Process", outcome: "Outcome & Learnings" },
+      meta: { category: "Category", duration: "Duration", team: "Team", tools: "Tools", company: "Company" } },
+  },
+};
+
+export const PROJECTS = [
+  {
+    id: "mishkat",
+    cover: "/images/mishkat/cover.png",
+    shots: MISHKAT_SHOTS, shotsMobile: true,
+    demo: "https://pwa.mishkat.us",
+    ar: {
+      name: "مِشكاة", category: "مشروع تخرج",
+      desc: "تجربة رقمية إنسانية صُممت لدعم الطلاب الموهوبين من خلال الوعي بالمشاعر، التركيز، والأنشطة القصيرة منخفضة الجهد.",
+      role: "بحث المستخدم، تصميم الواجهات، اختبار قابلية الاستخدام",
+      tools: "Figma, Flutter",
+      meta: [["التصنيف", "مشروع تخرج"], ["المدة", "سبتمبر ٢٠٢٥ – يونيو ٢٠٢٦"], ["الفريق", "٦ أعضاء"], ["الأدوات", "Figma، Flutter"]],
+      overview: ["مِشكاة تطبيق جوال عربي بالكامل يدعم الطلاب الموهوبين في المرحلة المتوسطة والثانوية على الوعي بمشاعرهم وتنظيمها ودعم التركيز الدراسي، من خلال أنشطة قصيرة منخفضة الجهد. التطبيق ليس أداة علاجية ولا يقدم تشخيصًا، بل مساحة شخصية وهادئة يستخدمها الطالب بنفسه."],
+      problem: [
+        "الطلاب الموهوبون يعيشون ضغطًا أكاديميًا مستمرًا وتوقعات عالية تُطبّع التميّز حتى يفقد قيمته، ومع ذلك لا يجدون أداة رقمية تناسبهم: التطبيقات الموجودة إمّا بلغة سريرية تشعرهم بأنهم «حالة»، أو تتطلب وقتًا وجهدًا لا يملكونه، أو لا تدعم العربية واتجاه RTL بشكل حقيقي.",
+        "وأظهر البحث أن الخصوصية والوصمة كانتا أكبر حاجزين أمام التبنّي: من أصل ٢٨٧ مشاركًا في الاستبيان، ٧٤ فقط سبق لهم استخدام تطبيق للصحة النفسية أو التأمل.",
+      ],
+      goal: ["تصميم تجربة هادئة عربية الأصل، تحوّل الدعم النفسي إلى تدخلات صغيرة تندمج في يوم الطالب الدراسي — بلا لغة طبية، بلا مقارنة اجتماعية، وبلا شعور بالذنب عند التوقف."],
+      role_body: ["عملت ضمن فريق من ٦ أعضاء، وشاركت في معظم مراحل تجربة المستخدم: إعداد نماذج المقابلات وتنفيذها، تحليل نتائج البحث واستخلاص نقاط الألم، بناء الشخصيات وخريطة رحلة المستخدم، تصميم الواجهات والنماذج التفاعلية، والمشاركة في اختبارات قابلية الاستخدام والتحسين بناءً على نتائجها."],
+      steps: [
+        ["البحث", "مقابلات شبه منظمة مع ١٥ طالبة موهوبة، واستبيان بـ٢٨٧ استجابة، وتحليل مقارن للتطبيقات المشابهة كشف غياب حل يجمع بين الجمهور الموهوب، العربية وRTL، والدعم داخل السياق المدرسي."],
+        ["التحديد", "تحويل النتائج إلى ست نقاط ألم موثّقة، وشخصيات، وخريطة رحلة، وقائمة احتياجات عاطفية تُترجم إلى قرارات تفاعل: الاعتراف بالشعور دون تشخيصه، التحكم الكامل بالبيانات، والمشاركة الاختيارية دائمًا."],
+        ["التصميم", "مخططات أولية ثم واجهات عالية الدقة، ونظام تصميم من مكوّنات قابلة لإعادة الاستخدام (بطاقة نشاط، مُحدّد المزاج، أزرار، مؤشرات تقدم، شاشات إتمام)، مع بنية تنقّل مسطّحة من خمسة أقسام."],
+        ["التقييم", "جولتان من اختبار قابلية الاستخدام على النموذج، ثم جولة ثالثة على النظام المنفّذ فعليًا مع ٦ مستخدمات من الفئة المستهدفة، بأسلوب التفكير بصوت عالٍ، وسيناريوهات واقعية، ومقابلات ختامية."],
+      ],
+      outcome: [
+        "تحسّن معدل إتمام المهام من ٦٨٪ إلى ٩٢٪ بين جولتَي التقييم، وانخفض متوسط زمن الإتمام من ٢.٤ إلى ١.٣ دقيقة. وفي اختبار النظام المنفّذ، أكملت ٦ من ٦ مستخدمات جميع السيناريوهات دون أي تدخل وفي أقل من ٣٠ دقيقة للجلسة الكاملة. ووصفن التجربة بكلمات شعورية لا وظيفية: «مريحة»، «إنجاز وهدوء»، «فخر».",
+        "أهم ما تعلّمته أن الوضوح البصري وحده لا يكفي؛ الميزة قد تبدو مفهومة تمامًا في Figma وتفشل في النظام الحقيقي لأنها تفتقد حالة اختيار أو حركة أو رسالة خطأ لطيفة. والأهم أن سوء فهم المستخدم لتسمية ما قد يكون إشارة إلى حاجة حقيقية، لا خطأً يُصحَّح.",
+      ],
+    },
+    en: {
+      name: "Mishkat", category: "Graduation Project",
+      desc: "A calm, Arabic-first mobile experience supporting gifted students through emotional awareness, focus, and short low-effort activities.",
+      role: "User Research, UI Design, Usability Testing",
+      tools: "Figma, Flutter",
+      meta: [["Category", "Graduation Project"], ["Duration", "Sep 2025 – Jun 2026"], ["Team", "6 members"], ["Tools", "Figma, Flutter"]],
+      overview: ["Mishkat is a fully Arabic mobile app that helps gifted middle and high school students notice and regulate how they feel, and stay focused on their studies, through short activities that ask very little of them. It is not a clinical or therapeutic tool and offers no diagnosis. It is a quiet, private space a student uses on their own terms."],
+      problem: [
+        "Gifted students carry constant academic pressure and expectations high enough to make excellence feel ordinary rather than earned. Yet no digital tool really fits them. The apps available either speak in clinical language that makes a student feel like a case, or demand time and effort they do not have, or offer no real Arabic and RTL support.",
+        "Research made the barrier concrete: privacy and stigma mattered more than features. Of 287 survey respondents, only 74 had ever used a mental health or meditation app.",
+      ],
+      goal: ["Design a calm, Arabic-first experience that turns emotional support into micro-interventions small enough to fit inside a school day — with no medical language, no social comparison, and no guilt for stopping."],
+      role_body: ["I worked within a team of 6 and contributed across most stages of the UX process: writing and conducting user interviews, analyzing research findings and identifying pain points, building personas and the user journey map, designing interfaces and interactive prototypes, and taking part in usability testing and the improvements that followed."],
+      steps: [
+        ["Research", "Semi-structured interviews with 15 gifted students and a survey with 287 responses, alongside a competitive analysis that revealed no existing product combining a gifted audience, genuine Arabic and RTL support, and relevance inside a school context."],
+        ["Define", "Findings became six documented pain points, personas, a journey map, and a list of emotional needs translated directly into interaction decisions: acknowledge a feeling without diagnosing it, keep data fully under the student's control, and make sharing always optional."],
+        ["Design", "Wireframes, then high-fidelity interfaces, and a design system of reusable components — activity card, mood selector, buttons, progress indicators, completion screens — over a flat five-section navigation structure."],
+        ["Evaluate", "Two rounds of usability testing on the prototype, then a third round on the working build with 6 users from the target audience, using think-aloud protocol, realistic task scenarios, and exit interviews."],
+      ],
+      outcome: [
+        "Task completion rose from 68% to 92% between the two evaluation rounds, and average completion time dropped from 2.4 to 1.3 minutes. In testing on the working build, all 6 users completed every scenario without intervention, in under 30 minutes per full session. They described the experience in emotional rather than functional terms: comfortable, calm, a sense of accomplishment.",
+        "What I took from it: visual clarity alone is not enough. A feature can look perfectly understood in Figma and still fail in a real build because it lacks a selected state, a transition, or a gentle error message. And more importantly, when a user misreads a label, that confusion is often pointing at a real need rather than a mistake to correct.",
+      ],
+    },
+  },
+  {
+    id: "easypay",
+    cover: "/images/easypay/cover.png",
+    shots: EASYPAY_SHOTS, shotsMobile: true,
+    demo: null,
+    ar: {
+      name: "EasyPay", category: "خبرة",
+      desc: "تحليل وتحسين واجهات منتجات دفع ونقاط بيع رقمية، وبناء مكتبات مكوّنات موحّدة لأربعة أجهزة.",
+      role: "تصميم منتج، تصميم واجهات، دعم نظام التصميم",
+      tools: "Figma",
+      meta: [["التصنيف", "خبرة"], ["الجهة", "EasyPay — مكة"], ["المدة", "مارس – يوليو ٢٠٢٥"], ["الأدوات", "Figma"]],
+      overview: ["تدريب ميداني في شركة تقنية متخصصة في ربط أنظمة المبيعات بأنظمة الدفع. اشتغلت ضمن فريق التصميم على تحليل وتحسين واجهات أربعة منتجات: نقاط بيع على الجوال (SoftPOS)، أنظمة محطات الوقود، أكشاك الخدمة الذاتية، وشاشات العميل التفاعلية."],
+      problem: [
+        "منتجات الشركة تعمل على أجهزة مختلفة تمامًا في طبيعتها: جوال يمسكه الكاشير بيد واحدة، كشك يقف أمامه العميل وحده بلا مساعدة، وشاشة تواجه العميل أثناء الدفع. ومع ذلك كانت الواجهات تُصمَّم لكل جهاز على حدة، بلا مرجع بصري موحّد يربطها.",
+        "النتيجة اختلافات في الألوان والمكوّنات والمسافات بين المنتجات، وإعادة بناء العناصر نفسها كل مرة من الصفر — وهو ما يبطئ التصميم والتطوير معًا.",
+      ],
+      goal: ["فهم كل منتج ومستخدميه، تحديد فرص التحسين بمنهجية لا بانطباع، وبناء أساس بصري موحّد يضمن اتساق المنتجات ويقلّل وقت التطوير."],
+      role_body: ["شاركت ضمن فريق التصميم في تحليل المنتجات، إجراء مقابلات المستخدمين وتحليل نتائجها، بناء الشخصيات وخرائط الرحلة، تصميم النماذج الأولية، والمساهمة في بناء مكتبة المكوّنات."],
+      steps: [
+        ["التحليل", "دراسة خمسة من أجهزة الشركة وتحليل واجهاتها الحالية باستخدام مبادئ نيلسن العشر لقابلية الاستخدام، مع تحديد الفئة المستهدفة والمهام التي ينفّذها المستخدم على كل جهاز."],
+        ["البحث", "مقابلات مع المستخدمين الحاليين لفهم احتياجاتهم وتوقعاتهم، وتحليل المنافسين في السوق، ثم تلخيص النتائج في تقارير واضحة."],
+        ["التحديد", "بناء شخصيات مستخدمين وخرائط رحلة للمنتجات، مثل موظفة كاشير في مقهى تحتاج سرعة في الإنجاز، ومدير مطعم يواجه ازدحام الطلبات ويريد تقليل الضغط على موظفيه."],
+        ["التصميم", "مفاهيم أولية ثم مخططات أولية ثم نماذج عالية الدقة، مع تحسين تدفق المستخدم وتقليل الخطوات غير الضرورية في كل مسار."],
+        ["بناء نظام التصميم", "مكتبة مكوّنات لكل منتج ضمن هوية بصرية واحدة: نظام ألوان بدرجات فاتحة وداكنة، أنماط الخط والتباعد، وإرشادات استخدام تشمل معايير الوصول."],
+        ["المراجعة والتكرار", "عرض النماذج على الفريق الداخلي والمشرفين، تعديل التصميم بناءً على الملاحظات، ثم اختبارات قابلية استخدام مع مستخدمين حقيقيين وتحسين الواجهات بناءً على نتائجها."],
+      ],
+      outcome: [
+        "سلّمت مكتبات مكوّنات لأربعة منتجات، ونماذج تفاعلية عالية الدقة، وتقارير بحث وتحسين لتجربة المستخدم.",
+        "أهم ما تعلّمته أن أصعب ما واجهني في البداية لم يكن التصميم، بل فهم المنتجات نفسها — كيف يعمل كل جهاز وما الفرق بين سياقات استخدامها. وهذا علّمني أن التصميم داخل شركة يبدأ بفهم المنتج قبل فتح Figma، وأن نظام التصميم ليس ترفًا بصريًا بل أداة تسريع: كل مكوّن موحّد يعني وقتًا أقل في التصميم والتطوير، وأخطاء أقل في التسليم.",
+      ],
+    },
+    en: {
+      name: "EasyPay", category: "Industry Experience",
+      desc: "Analyzing and improving the interfaces of digital payment and point-of-sale products, and building unified component libraries across four devices.",
+      role: "Product Design, UI Design, Design System Support",
+      tools: "Figma",
+      meta: [["Category", "Experience"], ["Company", "EasyPay — Makkah"], ["Duration", "Mar – Jul 2025"], ["Tools", "Figma"]],
+      overview: ["A field internship at a technology company that connects sales systems to payment systems. I worked within the design team analyzing and improving the interfaces of four products: mobile point of sale (SoftPOS), fuel station systems, self-service kiosks, and customer-facing display screens."],
+      problem: [
+        "These products run on devices with fundamentally different natures: a phone a cashier holds in one hand, a kiosk a customer faces alone with no one to ask, and a screen that faces the customer during payment. Yet each interface was being designed on its own, with no shared visual reference tying them together.",
+        "The result was drift — colors, components, and spacing diverging across products, and the same elements rebuilt from scratch each time. That slowed design and development alike.",
+      ],
+      goal: ["Understand each product and its users, identify improvement opportunities through method rather than impression, and build a unified visual foundation that keeps the products consistent and cuts development time."],
+      role_body: ["Within the design team, I contributed to product analysis, conducting and analyzing user interviews, building personas and journey maps, designing prototypes, and helping build the component library."],
+      steps: [
+        ["Analysis", "Studied five of the company's devices and audited their existing interfaces against Nielsen's ten usability heuristics, defining the target audience and the tasks users perform on each device."],
+        ["Research", "Interviews with existing users to understand their needs and expectations, plus a competitor analysis, with findings summarized into clear reports."],
+        ["Define", "Built user personas and journey maps — among them a café cashier who needs speed above all, and a restaurant manager facing order congestion who wants to ease the pressure on staff."],
+        ["Design", "Initial concepts, then wireframes, then high-fidelity prototypes, improving user flow and stripping unnecessary steps from each path."],
+        ["Design system", "A component library for each product under one visual identity: a color system with light and dark scales, type and spacing rules, and usage guidelines covering accessibility standards."],
+        ["Review & iterate", "Reviewed prototypes with the internal team and supervisors, revised based on feedback, then ran usability tests with real users and refined the interfaces accordingly."],
+      ],
+      outcome: [
+        "I delivered component libraries for four products, high-fidelity interactive prototypes, and research and UX improvement reports.",
+        "What I took from it: the hardest part at the start was not the design work but understanding the products themselves — how each device operates and how their usage contexts differ. That taught me that design inside a company begins with understanding the product, well before opening Figma. And that a design system is not visual luxury but a speed tool: every unified component means less time in design and development, and fewer errors at handoff.",
+      ],
+    },
+  },
+];
