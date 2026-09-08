@@ -5,11 +5,11 @@ import { Nav, Hero, About, Process, Work, Skills, Contact, Footer, CaseStudy } f
 import "./styles.css";
 
 function useAppState() {
-  const [lang, setLang] = useState(() => localStorage.getItem("lang") || "en");
+  const [lang, setLang] = useState(() => localStorage.getItem("lang-v2") || "en");
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "system");
   const [resolved, setResolved] = useState("light");
 
-  useEffect(() => { localStorage.setItem("lang", lang); }, [lang]);
+  useEffect(() => { localStorage.setItem("lang-v2", lang); }, [lang]);
   useEffect(() => { localStorage.setItem("theme", theme); }, [theme]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function useAppState() {
   return { lang, setLang, theme: resolved, setTheme: (v) => setTheme(v), };
 }
 
-function Home({ t, lang }) {
+function Home({ t, lang, theme }) {
   const navigate = useNavigate();
   const onNav = (id) => {
     const el = document.getElementById(id);
@@ -34,14 +34,14 @@ function Home({ t, lang }) {
       <Hero t={t} onNav={onNav} />
       <About t={t} />
       <Process t={t} lang={lang} />
-      <Work t={t} lang={lang} openProject={(id) => navigate(`/work/${id}`)} />
+      <Work t={t} lang={lang} theme={theme} openProject={(id) => navigate(`/work/${id}`)} />
       <Skills t={t} />
       <Contact t={t} />
     </main>
   );
 }
 
-function CasePage({ t, lang }) {
+function CasePage({ t, lang, theme }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = PROJECTS.find((p) => p.id === id);
@@ -49,7 +49,7 @@ function CasePage({ t, lang }) {
   if (!project) return <Navigate to="/" replace />;
   return (
     <main>
-      <CaseStudy t={t} lang={lang} project={project} back={() => navigate("/")} />
+      <CaseStudy t={t} lang={lang} theme={theme} project={project} back={() => navigate("/")} />
     </main>
   );
 }
@@ -79,8 +79,8 @@ export default function App() {
     <div className="rz" dir={t.dir} data-theme={theme} lang={lang}>
       <Nav t={t} lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} onNav={goSection} />
       <Routes>
-        <Route path="/" element={<Home t={t} lang={lang} />} />
-        <Route path="/work/:id" element={<CasePage t={t} lang={lang} />} />
+        <Route path="/" element={<Home t={t} lang={lang} theme={theme} />} />
+        <Route path="/work/:id" element={<CasePage t={t} lang={lang} theme={theme} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer t={t} />

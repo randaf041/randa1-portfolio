@@ -7,6 +7,16 @@ import {
 } from "lucide-react";
 import { PROJECTS } from "./content";
 
+function CursorMark() {
+  return (
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+      <path d="M5.5 3.2 19 11.4l-5.9 1.2-2.4 5.6z" fill="#1ABCFE" />
+      <path d="M5.5 3.2 19 11.4l-5.9 1.2-2.4 5.6z" fill="none"
+            stroke="#0D8FC4" strokeWidth="1" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export const CV_URL = "/cv.pdf";
 export const EMAIL = "Randaalzahrani0@gmail.com";
 export const PHONE = "+966 55 647 0445";
@@ -99,14 +109,6 @@ export function Nav({ t, lang, setLang, theme, setTheme, go, onNav }) {
             <a className="navcta" href={CV_URL} download>
               <Download size={15} strokeWidth={1.8} />{t.nav.cv}
             </a>
-            <button className="icobtn" onClick={() => setLang(lang === "ar" ? "en" : "ar")}
-              aria-label="Switch language">
-              <Languages size={18} strokeWidth={1.6} />
-            </button>
-            <button className="icobtn" onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              aria-label="Toggle theme">
-              {theme === "light" ? <Moon size={18} strokeWidth={1.6} /> : <Sun size={18} strokeWidth={1.6} />}
-            </button>
           </div>
         </div>
       )}
@@ -120,7 +122,9 @@ export function Hero({ t, onNav }) {
       <div className="wrap hero-grid">
         <div>
           <p className="eyebrow">{t.hero.eyebrow}</p>
-          <h1>{t.hero.title}</h1>
+          <h1 className="hero-title">
+            {t.hero.titleLines.map((line) => <span key={line}>{line}</span>)}
+          </h1>
           <p className="hero-intro">{t.hero.intro}</p>
           <div className="hero-btns">
             <button className="btn btn-primary" onClick={() => onNav("work")}>{t.hero.primary}</button>
@@ -132,10 +136,10 @@ export function Hero({ t, onNav }) {
         <div className="avatar-stage">
           <div className="orb">
             <Avatar src="/images/avatar-hero.png" alt="Randa" size={130} />
-            <span className="spark s1"><Star size={19} strokeWidth={1.6} /></span>
-            <span className="spark s2"><Laptop size={19} strokeWidth={1.6} /></span>
-            <span className="spark s3"><Palette size={19} strokeWidth={1.6} /></span>
-            <span className="spark s4"><Sparkles size={19} strokeWidth={1.6} /></span>
+            <span className="spark s1">⭐</span>
+            <span className="spark s2">💻</span>
+            <span className="spark s3"><CursorMark /></span>
+            <span className="spark s4">✨</span>
           </div>
         </div>
       </div>
@@ -147,8 +151,10 @@ export function About({ t }) {
   return (
     <section className="sec" id="about">
       <div className="wrap about-grid">
-        <div className="about-card">
-          <Avatar src="/images/avatar-laptop.png" alt="Randa" size={110} />
+        <div className="avatar-stage about-stage">
+          <div className="orb orb-sm">
+            <Avatar src="/images/avatar-laptop.png" alt="Randa" size={110} />
+          </div>
         </div>
         <div className="about-text">
           <h2>{t.about.title}</h2>
@@ -185,7 +191,7 @@ export function Process({ t }) {
   );
 }
 
-export function Work({ t, lang, openProject }) {
+export function Work({ t, lang, theme, openProject }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   return (
     <section className="sec" id="work">
@@ -202,15 +208,12 @@ export function Work({ t, lang, openProject }) {
                 <span className="pcard-tab"><i>{d.category}</i></span>
                 <div className="pcard">
                 <div className="pcard-img">
-                  <Img src={p.cover} alt={d.name} label={p.cover} ratio="16 / 10" />
+                  <Img src={theme === "dark" ? p.coverDark : p.cover} alt={d.name}
+                       label={p.cover} ratio="16 / 10" />
                 </div>
                 <div className="pcard-body">
                   <h3>{d.name}</h3>
                   <p className="pdesc">{d.desc}</p>
-                  <div className="pmeta">
-                    <span><b>{t.work.role}:</b> {d.role}</span>
-                    <span><b>{t.work.tools}:</b> {d.tools}</span>
-                  </div>
                   <span className="pcard-cta">{t.work.cta} <Arrow size={15} strokeWidth={1.9} /></span>
                 </div>
                 </div>
@@ -333,7 +336,7 @@ export function Footer({ t }) {
 
 const STEP_ICONS = [Search, Target, PenTool, Layers, RefreshCw, TestTube];
 
-export function CaseStudy({ t, lang, project, back }) {
+export function CaseStudy({ t, lang, theme, project, back }) {
   const d = project[lang];
   const L = t.cs.labels;
   const Back = lang === "ar" ? ArrowRight : ArrowLeft;
@@ -359,7 +362,8 @@ export function CaseStudy({ t, lang, project, back }) {
         </div>
 
         <div className="cs-cover">
-          <Img src={project.cover} alt={d.name} label={project.cover} ratio="16 / 10" />
+          <Img src={theme === "dark" ? project.coverDark : project.cover} alt={d.name}
+               label={project.cover} ratio="16 / 10" />
         </div>
       </div>
 
@@ -398,7 +402,7 @@ export function CaseStudy({ t, lang, project, back }) {
       </div>
 
       <div className="wrap">
-        <section className="blk flowsec">
+        <section className="blk flowsec narrow">
           <h2>{L.process}</h2>
           <ol className="flow">
             {d.steps.map(([h, p], i) => {
@@ -437,7 +441,7 @@ export function CaseStudy({ t, lang, project, back }) {
       </div>
 
       <div className="wrap">
-        <section className="blk">
+        <section className="blk narrow">
           <h2>{L.outcome}</h2>
           <div className="metrics">
             {d.metrics.map(([value, label]) => (
