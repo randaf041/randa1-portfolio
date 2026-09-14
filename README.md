@@ -44,32 +44,21 @@ public/
 | `/work/mishkat` | دراسة حالة مِشكاة |
 | `/work/easypay` | دراسة حالة EasyPay |
 
-## إضافة خط Thmanyah
+## الخطوط
 
-ضعي ملفات الخط في `public/fonts/`، ثم أضيفي في أعلى `src/styles.css`:
+خط Thmanyah مثبّت أصلًا في `public/fonts/` بصيغة WOFF (ثلاثة أوزان: 400، 500، 700)،
+ومعرَّف عبر `@font-face` في أعلى `src/styles.css`. الملفات مُقلّمة على العربية واللاتينية
+فقط، فحجم الوزن الواحد نحو 84 ك.ب بدل 240.
 
-```css
-@font-face {
-  font-family: "Thmanyah";
-  src: url("/fonts/ThmanyahSerifText-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Thmanyah";
-  src: url("/fonts/ThmanyahSerifText-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Thmanyah";
-  src: url("/fonts/ThmanyahSerifText-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-display: swap;
-}
-```
+خطوط IBM Plex تُحمَّل من Google Fonts عبر `<link>` في `index.html` — لا تُعيديها إلى
+`@import` داخل CSS لأن ذلك يؤخّر أول رسم للصفحة.
 
-العناوين تستدعي `Thmanyah` أصلًا، فبمجرد إضافة الملفات يتغيّر شكلها تلقائيًا.
+## الصور
+
+كل الصور بصيغة WebP داخل `public/images/`. الشاشات مصدَّرة بعرض 640 بكسل والأغلفة
+بعرض 1400. عند استبدال أي صورة، احتفظي بنفس الاسم والامتداد، وحدّثي الأبعاد المرافقة
+لها في `src/content.js` (آخر رقمين في كل سطر داخل `MISHKAT_SHOTS` و`EASYPAY_SHOTS`)
+حتى لا يقفز التخطيط أثناء التحميل.
 
 ## تعديل المحتوى
 
