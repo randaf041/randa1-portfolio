@@ -17,7 +17,7 @@ function CursorMark() {
   );
 }
 
-export const CV_URL = "/cv.pdf";
+export const CV_URL = "/Randa_Alzahrani_CV.pdf";
 export const EMAIL = "Randaalzahrani0@gmail.com";
 export const PHONE = "+966 55 647 0445";
 export const LINKEDIN = "https://www.linkedin.com/in/randa-alzahrani-36820b274/";
